@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: #f3f4f8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#appcont {
+  width: 60%;
+  /* background-color: yellow; */
+  margin-top: 80px;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#profileImg {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /* background-color: red; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#cardTitle {
+  font-size: 1.5rem;
+  outline: none;
+}
+
+#card {
+  border-width: 0;
+  /* background-color: green; */
+  padding: 1.5rem;
+  
+}
+
+#cardBody {
+  font-size: 0.9rem;
+}
+
+.imgIcon {
+  height: 50px;
+  width: 50px;
+}
+
+.buttonCont {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.servicebutton {
+  width: inherit;
+  margin-top: .8rem;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttonitem {
+  margin-left: 1rem;
+}
+
+#servicetitle {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.listitem {
+  border: none !important;
+  background-color: #f3f4f8 !important;
+}
+
+.menu {
+  /* background-color: aqua; */
+  width: 60%;
+}
+
+.navbarcont {
+  justify-content: center !important;
+  padding: .7rem !important;
+}
+
+.servicename {
+  /* color: black !important; */
 }
