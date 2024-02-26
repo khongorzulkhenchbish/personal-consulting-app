@@ -36,7 +36,7 @@ const Services = () => {
       <Card.Title id="servicetitle">
         HOW IS THE CONSULTATION GOING
       </Card.Title>
-      <ListGroup horizontal>
+      <ListGroup>
         {Object.keys(processes).map((key) =>(
           <>
             <ListGroup.Item className='listitem'>

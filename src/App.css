@@ -15,7 +15,6 @@ html,
 }
 
 #profileImg {
-  padding-top: 1rem;
   padding-bottom: 1rem;
   /* background-color: red; */
 }
@@ -34,6 +33,7 @@ html,
 
 #cardBody {
   font-size: 0.9rem;
+  padding: 0;
 }
 
 .imgIcon {
