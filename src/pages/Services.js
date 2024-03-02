@@ -8,21 +8,26 @@ import { Card, Container } from 'react-bootstrap';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 const Services = () => {
-  // const [servicename, setServicename] = useState("");
-  // const [websiteurl, setWebsiteurl] = useState("");
-  // const [imageurl, setImageurl] = useState("");
   const [services, setServices] = useState([]);
   const [processes, setProcesses] = useState([]);
+  const [feedbacks, setFeedbacks] = useState([]);
   
   useEffect(() => {
     const servicesRef = ref(db, 'services');
     const processRef = ref(db, 'process');
+    const feedbacksRef = ref(db, 'feedbacks');
+
     onValue(servicesRef, (snapshot) => {
       setServices(snapshot.val());
     });
-
+    
     onValue(processRef, (snapshot) => {
       setProcesses(snapshot.val());
+      // console.log(snapshot.val());
+    });
+    
+    onValue(feedbacksRef, (snapshot) => {
+      setFeedbacks(snapshot.val());
       // console.log(snapshot.val());
     });
   }, []);
@@ -32,33 +37,57 @@ const Services = () => {
   }
 
   return (
-    <>
+    <Container>
       <Card.Title id="servicetitle">
         HOW IS THE CONSULTATION GOING
       </Card.Title>
       <ListGroup>
-        {Object.keys(processes).map((key) =>(
+        {Object.keys(processes).map((process) =>(
           <>
             <ListGroup.Item className='listitem'>
               <Card.Title style={{marginBottom:'8px'}}>
-                {key}
+                {process}
               </Card.Title>
-              {processes[key]}
+              {processes[process]}
             </ListGroup.Item>
           </>
         ))}
       </ListGroup>
-      {Object.keys(services).map((key) =>(
-        <Button variant="primary" className="servicebutton" onClick={() => redirectToWebsite(services[key]['website_url'])}>
+      {Object.keys(services).map((service) =>(
+        <Button variant="primary" className="servicebutton" onClick={() => redirectToWebsite(services[service]['website_url'])}>
           <Container className="buttonCont">
-            <Image className="imgIcon" src={services[key]['image_url']} rounded/>
+            <Image className="imgIcon" src={services[service]['image_url']} rounded/>
             <Card.Text className="buttonitem">
-              {services[key]['service_name']}
+              {services[service]['service_name']}
             </Card.Text>
           </Container>
-          </Button>
+        </Button>
       ))}
-    </>
+      {feedbacks ? (
+        <>
+        <Card.Title id="servicetitle" style={{marginTop:'1rem', marginBottom:'1rem'}}>
+          WHAT THE USERS ARE SAYING
+        </Card.Title>
+        <ListGroup horizontal id="horizontalScrollList">
+          {Object.keys(feedbacks).map((feedback) =>(
+            <>
+              <ListGroup.Item className='feedbackitem'>
+                <Card style={{border:'none'}}>
+                  <Card.Body>
+                    <Card.Text className="textcenter">{feedbacks[feedback]['feedback']}</Card.Text>
+                    <Card.Title className="textcenter">{feedbacks[feedback]['fullname']}</Card.Title>
+                    <Card.Text className="textcenter"><i>{feedbacks[feedback]['position']}</i></Card.Text>
+                  </Card.Body>
+                </Card>
+              </ListGroup.Item>
+            </>
+          ))}
+        </ListGroup>
+        </>
+        ) : (
+          <></>
+        )}
+    </Container>
   )
 }
 

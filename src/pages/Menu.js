@@ -9,6 +9,7 @@ const Menu=()=>{
             <Nav className="menu">
                 <Nav.Link className="servicename" href="services"><strong>Services</strong></Nav.Link>
                 <Nav.Link className="servicename" href="about">About</Nav.Link>
+                <Nav.Link className="servicename" href="sendfeedback">Send Feedback</Nav.Link>
             </Nav>
         </Navbar>
     )
