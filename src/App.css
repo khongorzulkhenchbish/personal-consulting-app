@@ -1,9 +1,14 @@
 body,
-html,
-#root {
+html {
   margin: 0;
   padding: 0;
   overflow: auto;
+  background-color: #f3f4f8;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
   background-color: #f3f4f8;
 }
 
@@ -105,5 +110,6 @@ html,
 #horizontalScrollList {
   display: flex;
   overflow-x: auto;
-  max-width: 100%;
+  width: 100%;
+  margin-bottom: 1rem;
 }
