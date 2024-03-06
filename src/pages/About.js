@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import Profile from '../assets/profile.jpg'
 import { ref, onValue } from "firebase/database";
 import db from "../firebase-config.js";
+import { Container } from 'react-bootstrap';
 
 
 const About = () => {
@@ -21,7 +22,7 @@ const About = () => {
   }, []);
   console.log(typeof aboutme);
   return (
-    <>
+    <Container>
     <Card id="card">
       <Row>
         <Col sm={5}>
@@ -39,7 +40,7 @@ const About = () => {
         </Col>
       </Row>
     </Card>
-  </>
+  </Container>
   )
 }
 

@@ -67,7 +67,7 @@ class SendFeedback extends Component{
             style={{height:'15rem'}}
             placeholder="Sample: I received consultation on preparing for the Google STEP internship, and it was very helpful; I managed to pass the technical stage! I'd recommend her service!"/>
         </Form.Group>
-        <Button variant="primary" className="servicebutton" onClick={() => this.validateAndSendFeedback()}>Send Feedback</Button>
+        <Button variant="danger" className="servicebutton" onClick={() => this.validateAndSendFeedback()}>Send Feedback</Button>
       </Form>
     </Container>
     );

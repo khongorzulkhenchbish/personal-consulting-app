@@ -3,25 +3,26 @@ html {
   margin: 0;
   padding: 0;
   overflow: auto;
-  background-color: #f3f4f8;
+  background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
+  height: 100%;
 }
 
 #root {
   margin: 0;
   padding: 0;
-  background-color: #f3f4f8;
 }
 
 #appcont {
   width: 60%;
   /* background-color: yellow; */
-  margin-top: 80px;
   padding: 0;
+  margin-top: 4rem;
 }
 
 @media (max-width: 1024px) {
   #appcont {
     width: 100%;
+    /* background-color: green; */
   }
 }
 
@@ -37,7 +38,7 @@ html {
 
 #card {
   border-width: 0;
-  /* background-color: green; */
+  background-color: rgba(255, 0, 0, 0) !important;
   padding: 1.5rem;
   
 }
@@ -63,6 +64,7 @@ html {
   width: inherit;
   margin-top: .8rem;
   width: 100%;
+  background-color: #f54291 !important;
 }
 
 .buttonitem {
@@ -78,7 +80,7 @@ html {
 
 .listitem {
   border: none !important;
-  background-color: #f3f4f8 !important;
+  background-color: rgba(255, 0, 0, 0) !important;
 }
 
 .menu {
@@ -101,7 +103,7 @@ html {
 
 .feedbackitem {
   padding: 0 !important;
-  width: 15rem;
+  width: 18rem;
   border: none !important;
   margin-right: .6rem;
   flex: 0 0 auto;
@@ -111,5 +113,13 @@ html {
   display: flex;
   overflow-x: auto;
   width: 100%;
-  margin-bottom: 1rem;
+}
+
+.feedbackcard {
+  height: 100% !important;
+  background: linear-gradient(
+    to bottom right,
+    #ffa0d2 0%,
+    #ff78ae 100%
+  );
 }

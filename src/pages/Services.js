@@ -54,7 +54,7 @@ const Services = () => {
         ))}
       </ListGroup>
       {Object.keys(services).map((service) =>(
-        <Button variant="primary" className="servicebutton" onClick={() => redirectToWebsite(services[service]['website_url'])}>
+        <Button variant="danger" className="servicebutton" onClick={() => redirectToWebsite(services[service]['website_url'])}>
           <Container className="buttonCont">
             <Image className="imgIcon" src={services[service]['image_url']} rounded/>
             <Card.Text className="buttonitem">
@@ -72,7 +72,7 @@ const Services = () => {
           {Object.keys(feedbacks).map((feedback) =>(
             <>
               <ListGroup.Item className='feedbackitem'>
-                <Card style={{border:'none'}}>
+                <Card style={{border:'none'}} className='feedbackcard'>
                   <Card.Body>
                     <Card.Text className="textcenter">{feedbacks[feedback]['feedback']}</Card.Text>
                     <Card.Title className="textcenter">{feedbacks[feedback]['fullname']}</Card.Title>
