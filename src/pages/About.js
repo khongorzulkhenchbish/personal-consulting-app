@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import Profile from '../assets/profile.jpg'
 import { ref, onValue } from "firebase/database";
 import db from "../firebase-config.js";
 import { Container } from 'react-bootstrap';
@@ -11,12 +10,14 @@ import { Container } from 'react-bootstrap';
 const About = () => {
   const [aboutme, setAboutme] = useState([]);
   const [title, setTitle] = useState("");
+  const [profilePic, setProfilePic] = useState("");
   
   useEffect(() => {
     const aboutpageRef = ref(db, 'aboutpage');
     onValue(aboutpageRef, (snapshot) => {
       setTitle(snapshot.val()['jobtitle'])
       setAboutme(snapshot.val()['aboutme']);
+      setProfilePic(snapshot.val()['imgUrl']);
     });
     
   }, []);
@@ -26,7 +27,7 @@ const About = () => {
     <Card id="card">
       <Row>
         <Col sm={5}>
-          <Card.Img variant="top" src={Profile} id="profileImg"/>
+          <Card.Img variant="top" src={profilePic} id="profileImg"/>
           <Card.Title id="cardTitle">
             {title}
           </Card.Title>
