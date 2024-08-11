@@ -54,7 +54,7 @@ const Services = () => {
         ))}
       </ListGroup>
       {Object.keys(services).map((service) =>(
-        <Button variant="danger" className="servicebutton" onClick={() => redirectToWebsite(services[service]['website_url'])}>
+        <Button variant="light" className="servicebutton" onClick={() => redirectToWebsite(services[service]['website_url'])}>
           <Container className="buttonCont">
             <Image className="imgIcon" src={services[service]['image_url']} rounded/>
             <Card.Text className="buttonitem">

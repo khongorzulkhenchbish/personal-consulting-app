@@ -64,7 +64,7 @@ html {
   width: inherit;
   margin-top: .8rem;
   width: 100%;
-  background-color: #f54291 !important;
+  background-color: #e4efef !important;
 }
 
 .buttonitem {
@@ -119,7 +119,7 @@ html {
   height: 100% !important;
   background: linear-gradient(
     to bottom right,
-    #ffa0d2 0%,
-    #ff78ae 100%
+    #f8fefe 0%,
+    #d3e9e9 100%
   );
 }
