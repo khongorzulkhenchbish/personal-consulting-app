@@ -38,6 +38,9 @@ const About = () => {
           {Object.keys(aboutme).map((key) =>(
             <Card.Text>{aboutme[key]}</Card.Text>
           ))}
+          <a href="https://www.linkedin.com/in/zulaconnect/" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Linkedin</a>
+          &#160;|&#160;
+          <a href="https://github.com/hongorzulnemo/" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Github</a>
         </Card.Body>
         </Col>
       </Row>

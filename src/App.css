@@ -3,7 +3,8 @@ html {
   margin: 0;
   padding: 0;
   overflow: auto;
-  background-color: white;
+  /* background-color: white; */
+  background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
   height: 100%;
 }
 
@@ -39,8 +40,6 @@ html {
 #card {
   border-width: 0;
   background-color: rgba(255, 0, 0, 0) !important;
-  padding: 1.5rem;
-  
 }
 
 #cardBody {
@@ -62,9 +61,9 @@ html {
 
 .servicebutton {
   width: inherit;
-  margin-top: .8rem;
   width: 100%;
   background-color: #eeeeee !important;
+  margin-top: 1rem;
 }
 
 .buttonitem {
@@ -74,8 +73,7 @@ html {
 #servicetitle {
   font-size: 1.5rem;
   text-align: center;
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
+  padding: 1rem;
   font-weight: 400;
 }
 
@@ -92,7 +90,6 @@ html {
 .navbarcont {
   justify-content: center !important;
   padding: .7rem !important;
-  background-color: #eeeeee;
 }
 
 .textcenter {
@@ -104,6 +101,7 @@ html {
   width: 18rem;
   border: none !important;
   flex: 0 0 auto;
+  background-color: rgba(255, 0, 0, 0) !important;
 }
 
 #horizontalScrollList {
@@ -114,9 +112,19 @@ html {
 
 .feedbackcard {
   height: 100% !important;
-  background-color: #eeeeee !important;
+  /* background-color: #eeeeee !important; */
+  background: linear-gradient(
+    to bottom right,
+  #f8fefe 0%,
+  #d3e9e9 100%
+  );
 }
 
 .textarea {
   background-color: #eeeeee !important;
+}
+
+.container {
+  padding-top: 1rem;
+  width: 95% !important;
 }

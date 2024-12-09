@@ -54,7 +54,7 @@ const Services = () => {
         ))}
       </ListGroup>
       <Card.Title id="servicetitle">
-        BOOK SLOT <i>(only after step 2)</i>
+        BOOK SLOT BELOW <i >(only after step 2)</i>
       </Card.Title>
       {Object.keys(services).map((service) =>(
         <Button variant="light" className="servicebutton" onClick={() => redirectToWebsite(services[service]['website_url'])}>
@@ -69,7 +69,7 @@ const Services = () => {
       {feedbacks ? (
         <>
         <Card.Title id="servicetitle">
-          CONSULTATION FEEDBACK
+          CONSULTATION FEEDBACKS
         </Card.Title>
         <ListGroup horizontal id="horizontalScrollList">
           {Object.keys(feedbacks).map((feedback) =>(
