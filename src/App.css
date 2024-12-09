@@ -53,10 +53,9 @@ html {
 }
 
 .buttonCont {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
   display: flex;
   align-items: center;
+  padding-top: 0 !important;
 }
 
 .servicebutton {
@@ -74,7 +73,11 @@ html {
   font-size: 1.5rem;
   text-align: center;
   padding: 1rem;
-  font-weight: 400;
+  font-weight: 600;
+}
+
+.servicename {
+  color: black !important;
 }
 
 .listitem {
@@ -127,4 +130,8 @@ html {
 .container {
   padding-top: 1rem;
   width: 95% !important;
+}
+
+.aboutpageimg {
+  margin-bottom: 1rem;
 }
