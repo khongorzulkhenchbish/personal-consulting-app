@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "codingwithzula",
+    "site": "zulatech",
     "public": "build",
     "ignore": [
       "firebase.json",
