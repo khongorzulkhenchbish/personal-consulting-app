@@ -5,7 +5,7 @@ import '../App.css';
 
 const Menu=()=>{
     return (    
-        <Navbar bg="white" data-bs-theme="light" fixed="top" className='navbarcont'>
+        <Navbar fixed="top" className='navbarcont'>
             <Nav className="menu">
                 <Nav.Link className="servicename" href="services"><strong>Services</strong></Nav.Link>
                 <Nav.Link className="servicename" href="about">About</Nav.Link>

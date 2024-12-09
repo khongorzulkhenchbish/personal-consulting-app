@@ -3,7 +3,7 @@ html {
   margin: 0;
   padding: 0;
   overflow: auto;
-  background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
+  background-color: white;
   height: 100%;
 }
 
@@ -64,7 +64,7 @@ html {
   width: inherit;
   margin-top: .8rem;
   width: 100%;
-  background-color: #e4efef !important;
+  background-color: #eeeeee !important;
 }
 
 .buttonitem {
@@ -74,8 +74,9 @@ html {
 #servicetitle {
   font-size: 1.5rem;
   text-align: center;
-  margin-bottom: 1.2rem;
-  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  font-weight: 400;
 }
 
 .listitem {
@@ -91,10 +92,7 @@ html {
 .navbarcont {
   justify-content: center !important;
   padding: .7rem !important;
-}
-
-.servicename {
-  color: black !important;
+  background-color: #eeeeee;
 }
 
 .textcenter {
@@ -102,10 +100,9 @@ html {
 }
 
 .feedbackitem {
-  padding: 0 !important;
+  padding-left: 0.1rem !important;
   width: 18rem;
   border: none !important;
-  margin-right: .6rem;
   flex: 0 0 auto;
 }
 
@@ -117,9 +114,9 @@ html {
 
 .feedbackcard {
   height: 100% !important;
-  background: linear-gradient(
-    to bottom right,
-    #f8fefe 0%,
-    #d3e9e9 100%
-  );
+  background-color: #eeeeee !important;
+}
+
+.textarea {
+  background-color: #eeeeee !important;
 }
