@@ -3,19 +3,21 @@ html {
   margin: 0;
   padding: 0;
   overflow: auto;
-  /* background-color: white; */
-  background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
   height: 100%;
+  background-image: url(
+    'https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
 }
 
 #root {
   margin: 0;
   padding: 0;
+  /* background-color: rgb(247, 242, 240); */
 }
 
 #appcont {
   width: 60%;
-  /* background-color: yellow; */
   padding: 0;
   margin-top: 4rem;
 }
@@ -23,18 +25,17 @@ html {
 @media (max-width: 1024px) {
   #appcont {
     width: 100%;
-    /* background-color: green; */
   }
-}
-
-#profileImg {
-  padding-bottom: 1rem;
-  /* background-color: red; */
 }
 
 #cardTitle {
   font-size: 1.5rem;
-  outline: none;
+  align-self: center;
+}
+
+#position {
+  font-size: 1rem;
+  align-self: center;
 }
 
 #card {
@@ -45,6 +46,8 @@ html {
 #cardBody {
   font-size: 0.9rem;
   padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .imgIcon {
@@ -61,18 +64,19 @@ html {
 .servicebutton {
   width: inherit;
   width: 100%;
-  background-color: #eeeeee !important;
+  background-color: white !important;
   margin-top: 1rem;
 }
 
 .buttonitem {
   margin-left: 1rem;
+  align-self: left;
 }
 
 #servicetitle {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   font-weight: 600;
 }
 
@@ -86,7 +90,6 @@ html {
 }
 
 .menu {
-  /* background-color: aqua; */
   width: 95%;
 }
 
@@ -115,12 +118,7 @@ html {
 
 .feedbackcard {
   height: 100% !important;
-  /* background-color: #eeeeee !important; */
-  background: linear-gradient(
-    to bottom right,
-  #f8fefe 0%,
-  #d3e9e9 100%
-  );
+  border: none !important;
 }
 
 .textarea {
@@ -134,4 +132,17 @@ html {
 
 .aboutpageimg {
   margin-bottom: 1rem;
+}
+
+.carousel-image {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.slick-dots {
+  position: static !important; /* Override 'absolute' position */
+}
+
+.slick-slider {
+  padding-bottom: 1rem;
 }

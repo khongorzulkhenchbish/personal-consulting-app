@@ -6,6 +6,7 @@ import Image from 'react-bootstrap/Image';
 import '../App.css';
 import { Card, Container } from 'react-bootstrap';
 import ListGroup from 'react-bootstrap/ListGroup';
+import FeedbackScroller from './FeedbackScroller';
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -23,12 +24,10 @@ const Services = () => {
     
     onValue(processRef, (snapshot) => {
       setProcesses(snapshot.val());
-      // console.log(snapshot.val());
     });
     
     onValue(feedbacksRef, (snapshot) => {
       setFeedbacks(snapshot.val());
-      // console.log(snapshot.val());
     });
   }, []);
 
@@ -71,21 +70,8 @@ const Services = () => {
         <Card.Title id="servicetitle">
           CONSULTATION FEEDBACKS
         </Card.Title>
-        <ListGroup horizontal id="horizontalScrollList">
-          {Object.keys(feedbacks).map((feedback) =>(
-            <>
-              <ListGroup.Item className='feedbackitem'>
-                <Card style={{border:'none'}} className='feedbackcard'>
-                  <Card.Body>
-                    <Card.Text className="textcenter">{feedbacks[feedback]['feedback']}</Card.Text>
-                    <Card.Title className="textcenter">{feedbacks[feedback]['fullname']}</Card.Title>
-                    <Card.Text className="textcenter"><i>{feedbacks[feedback]['position']}</i></Card.Text>
-                  </Card.Body>
-                </Card>
-              </ListGroup.Item>
-            </>
-          ))}
-        </ListGroup>
+        <FeedbackScroller feedbacks={feedbacks}>
+        </FeedbackScroller>
         </>
         ) : (
           <></>
