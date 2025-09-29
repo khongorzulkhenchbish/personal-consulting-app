@@ -49,6 +49,9 @@ const About = () => {
             <Card.Text>{aboutme[key]}</Card.Text>
           ))}
         </Card.Body>
+        <Card.Title id="cardTitle">
+          CONTACT LINKS
+        </Card.Title>
         {Object.keys(links).map((link) =>(
           <Button variant="light" className="servicebutton" onClick={() => redirectToWebsite(links[link]['href'])}>
             <Container className="buttonCont">

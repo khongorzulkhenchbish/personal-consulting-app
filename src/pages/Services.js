@@ -37,6 +37,17 @@ const Services = () => {
 
   return (
     <Container>
+      {feedbacks ? (
+        <>
+        <Card.Title id="servicetitle">
+          CONSULTATION FEEDBACKS
+        </Card.Title>
+        <FeedbackScroller feedbacks={feedbacks}>
+        </FeedbackScroller>
+        </>
+        ) : (
+          <></>
+      )}
       <Card.Title id="servicetitle">
         HOW THE CONSULTATION GOES
       </Card.Title>
@@ -53,7 +64,9 @@ const Services = () => {
         ))}
       </ListGroup>
       <Card.Title id="servicetitle">
-        BOOK SLOT BELOW <i >(only after step 2)</i>
+        CHOOSE FROM BELOW OPTIONS TO BOOK TIME
+        <br></br>
+        <i >(only after step 2)</i>
       </Card.Title>
       {Object.keys(services).map((service) =>(
         <Button variant="light" className="servicebutton" onClick={() => redirectToWebsite(services[service]['website_url'])}>
@@ -65,17 +78,6 @@ const Services = () => {
           </Container>
         </Button>
       ))}
-      {feedbacks ? (
-        <>
-        <Card.Title id="servicetitle">
-          CONSULTATION FEEDBACKS
-        </Card.Title>
-        <FeedbackScroller feedbacks={feedbacks}>
-        </FeedbackScroller>
-        </>
-        ) : (
-          <></>
-        )}
     </Container>
   )
 }
