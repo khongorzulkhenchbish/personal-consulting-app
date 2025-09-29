@@ -1,3 +1,6 @@
+### Project 2: End-to-End Online Consultation
+This project is a responsive web app that is an end-to-end online consulting solution. It was built using [Javascript with React framework, Firebase].
+
 <table>
   <tr>
     <td align="center">
